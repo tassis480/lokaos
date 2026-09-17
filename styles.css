@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color: #f5f5f5;
+  background: #090909;
+  font-family: "DM Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: #090909;
+}
+
+.presentation-card {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  background: #111111;
+  border: 1px solid #3a0d12;
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.65), 0 0 35px rgba(196, 24, 44, 0.16);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  min-height: 480px;
+  padding: 72px 9%;
+  background: linear-gradient(135deg, #210b0e 0%, #0b0b0b 58%, #180508 100%);
+  box-shadow: inset 0 -1px 0 rgba(255, 32, 55, 0.2);
+}
+
+.hero-copy {
+  max-width: 570px;
+}
+
+.eyebrow,
+.section-label {
+  color: #e3263f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 16px 0;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  letter-spacing: -0.07em;
+}
+
+h1 span {
+  color: #e3263f;
+}
+
+.intro {
+  max-width: 470px;
+  color: #d0bfc1;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.button {
+  display: inline-flex;
+  gap: 18px;
+  align-items: center;
+  margin-top: 22px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #c5162e;
+  box-shadow: 0 8px 20px rgba(197, 22, 46, 0.28);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.button:hover {
+  background: #ed1b35;
+  box-shadow: 0 12px 26px rgba(237, 27, 53, 0.38);
+  transform: translateY(-3px);
+}
+
+.portrait-frame {
+  position: relative;
+  flex: 0 0 290px;
+  height: 350px;
+  transform: rotate(3deg);
+  border: 10px solid #181818;
+  box-shadow: 12px 14px 0 #9e1024, 0 16px 35px rgba(0, 0, 0, 0.65);
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.sticker {
+  position: absolute;
+  right: -54px;
+  bottom: 22px;
+  padding: 13px 16px;
+  color: #ffffff;
+  background: #c5162e;
+  box-shadow: 7px 8px 0 #570b16, 0 10px 20px rgba(0, 0, 0, 0.45);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  transform: rotate(-8deg);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 70px 9%;
+}
+
+.info-block h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.05em;
+}
+
+.info-block p {
+  max-width: 440px;
+  color: #bcaeb0;
+  line-height: 1.8;
+}
+
+.highlight {
+  padding-left: 55px;
+  border-left: 1px solid #4b1b21;
+}
+
+ul {
+  display: grid;
+  gap: 18px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+  color: #d0bfc1;
+}
+
+li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+li span {
+  color: #ed1b35;
+  font-size: 1.4rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 9%;
+  border-top: 1px solid #351116;
+  color: #9d9294;
+  font-size: 0.82rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer strong {
+  color: #e3263f;
+}
+
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 8px 3px;
+  border-radius: 50%;
+  background: #e78859;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 14px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 42px;
+    padding: 54px 8%;
+  }
+
+  .portrait-frame {
+    align-self: center;
+    flex-basis: 260px;
+    width: 220px;
+    height: 280px;
+  }
+
+  .sticker {
+    right: -40px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 54px 8%;
+  }
+
+  .highlight {
+    padding: 35px 0 0;
+    border-top: 1px solid #4b1b21;
+    border-left: 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 20px 8%;
+  }
+}
